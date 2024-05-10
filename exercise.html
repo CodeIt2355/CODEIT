@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE IT</title>
+        <script>
+      function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .button {
+            border: 1px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 80px;
+            height: 5%;
+            background-color: white;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+        }
+
+        .button:hover {
+            background-color: grey;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+                        .settings-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            whitespace:nowrap;
+        }
+
+        .settings-item {
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hamburger-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hamburger-icon:last-child {
+            margin-bottom: 0;
+        }
+                main {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .settings-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .settings-content {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:black;
+        }
+
+
+        .logo {
+            width: 60px;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .word {
+            font-family: Algerian;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" class="logo">
+        <div class="word">CODE IT</div>
+                <ul>
+            <li><a href="CODE IT.html" >Home</a></li>
+            <li><a href="about us.html" >About Us</a></li>
+            <li><a href="contact us.html" >Contact</a></li>
+            <li><a href="index.html" >Logout</a></li>
+        </ul>
+        <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li>  
+                                      <li ><a href="pay.html" class="settings-item">Payment</a></li>
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+
+    </nav>
+
+    <h2>Coding Exercises</h2>
+
+    <h3>Exercise 1: HTML Basics</h3>
+    <p>
+        Write the html code to create a simple webpage with the following elements:
+    </p>
+    <ol>
+        <li>A heading with the text "Welcome to CODE IT"</li>
+        <li>An unordered list with three items: "html", "CSS", "JavaScript"</li>
+        <li>An image with the source "logo.jpg" and alt text "CODE IT Logo"</li>
+    </ol>
+    <textarea rows="8" cols="50">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CODE IT</title>
+</head>
+<body>
+    <h1>Welcome to CODE IT</h1>
+    <ul>
+        <li>htnl</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <img src="logo.jpg" alt="CODE IT Logo">
+</body>
+</html>
+    </textarea>
+
+    <h3>Exercise 2: CSS Styling</h3>
+    <p>
+        Add CSS styling to the html code from Exercise 1 to achieve the following:
+    </p>
+    <ol>
+        <li>Change the background color of the webpage to light blue</li>
+        <li>Center align the heading text</li>
+        <li>Apply a border to the image with a thickness of 2 pixels and a solid black color</li>
+    </ol>
+    <textarea rows="8" cols="50">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CODE IT</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            text-align: center;
+        }
+        img {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to CODE IT</h1>
+    <main>
+        <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li>   
+                                      <li ><a href="pay.html" class="settings-item">Payment</a></li>
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+        </div>
+    </div>
+</main>
+    <ul>
+        <li>html</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <img src="logo.jpg" alt="CODE IT Logo">
+    <script>
+      function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</htmlf>

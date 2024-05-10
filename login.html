@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  CODE IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+                .logo {
+            width: 60px;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+               <img src="logo.jpg" class="logo">
+        <h1>Welcome to Code It</h1>
+        
+    </header>
+    <main>
+        <h2>Login</h2>
+                    
+        <form id="login-form" action="" method="post" onsubmit="return validateForm()">
+            
+            <input type="text" id="email" name="email" placeholder="Email" required><br>
+
+        
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+            <button  name="submit" type="submit">Login</button>
+          <p>Don't have an account?<a href="index.html">Signup</a></p>  
+        </form>
+        <div id="error-msg" class="error"></div>
+    </main>
+
+
+</body>
+</html>

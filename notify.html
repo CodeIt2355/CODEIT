@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .button {
+            border: 1px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 150px;
+            height: 30px;
+            background-color: white;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+        }
+
+        .button:hover {
+            background-color: grey;
+        }
+                        .settings-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            whitespace:nowrap;
+        }
+
+        .settings-item {
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hamburger-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hamburger-icon:last-child {
+            margin-bottom: 0;
+        }
+                main {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .settings-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .settings-content {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:black;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .logo {
+            width: 60px;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .word {
+            font-family: Algerian;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" class="logo">
+        <div class="word">CODE IT</div>
+<main>
+        <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li> 
+                                      <li ><a href="pay.html" class="settings-item">Payment</a></li>
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+        </div>
+    </div>
+</main>
+        <ul>
+            <li><a href="CODE IT.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <h2>Notification Settings</h2>
+
+    <form>
+        <label>
+            <input type="checkbox" name="enableNotifications" id="enableNotifications">
+            Enable notifications
+        </label>
+        <label>
+            <input type="checkbox" name="newsUpdates" id="newsUpdates">
+            Receive news updates
+        </label>
+        <label>
+            <input type="checkbox" name="promotionOffers" id="promotionOffers">
+            Receive promotion offers
+        </label>
+        <button type="submit" class="button">Save Changes</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 CODE IT. All rights reserved.</p>
+    </footer>
+    <script>
+      function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .chat-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .online-users {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .online-users h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .online-users ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .online-users li {
+            margin-bottom: 5px;
+        }
+
+        .chat-window {
+            flex: 2;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .messages {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .message {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .message.sender {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .message.sender::before {
+            content: "You: ";
+            font-weight: bold;
+        }
+
+        .message.receiver::before {
+            content: "";
+        }
+
+        input[type="text"] {
+            width: calc(100% - 80px);
+            height: 30px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+        }
+
+        button {
+            width: 70px;
+            height: 30px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+                        .settings-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            whitespace:nowrap;
+        }
+
+        .settings-item {
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hamburger-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hamburger-icon:last-child {
+            margin-bottom: 0;
+        }
+                main {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .settings-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .settings-content {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:black;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+      
+        <!-- Navigation bar content -->
+                <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li>
+                     <li ><a href="pay.html" class="settings-item">Payment</a></li>   
+      
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+        </div>
+    </div>
+</main>
+            <li><a href="CODE IT.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html"> Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+
+    </nav>
+
+    <h2>Chat</h2>
+
+    <div class="chat-container">
+        <!-- List of online users -->
+        <div class="online-users">
+            <h3>Online Users</h3>
+            <ul id="onlineUsersList">
+                <!-- Online users will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- Chat window -->
+        <div class="chat-window">
+            <div class="messages" id="chatMessages">
+                <!-- Chat messages will be dynamically added here -->
+            </div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer content -->
+                <p>&copy; 2024 Code It. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code here
+        function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+                // Connect to WebSocket server
+        const socket = new WebSocket('ws://localhost:3000');
+
+        // Event listener for WebSocket connection established
+        socket.addEventListener('open', function (event) {
+            console.log('WebSocket connection established');
+        });
+
+        // Event listener for receiving messages from WebSocket server
+        socket.addEventListener('message', function (event) {
+            // Parse received message as JSON
+            const message = JSON.parse(event.data);
+
+            // Append message to chat window
+            appendMessage(message);
+        });
+
+        // Function to send a message
+        function sendMessage() {
+            // Get the message from the input field
+            const messageInput = document.getElementById("messageInput");
+            const messageText = messageInput.value.trim();
+
+            // Check if the message is not empty
+            if (messageText !== '') {
+                // Create message object
+                const message = {
+                    sender: 'User', // Replace with actual username or user ID
+                    text: messageText,
+                    timestamp: new Date().toISOString()
+                };
+
+                // Send message to WebSocket server
+                socket.send(JSON.stringify(message));
+
+                // Clear message input field
+                messageInput.value = '';
+            }
+        }
+
+        // Function to append a message to the chat window
+        function appendMessage(message) {
+            const chatMessages = document.getElementById("chatMessages");
+
+            // Create message element
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+            messageElement.textContent = `${message.sender}: ${message.text}`;
+
+            // Append message element to chat window
+            chatMessages.appendChild(messageElement);
+
+            // Scroll to the bottom of the chat window
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

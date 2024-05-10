@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+                        .settings-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            whitespace:nowrap;
+        }
+
+        .settings-item {
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hamburger-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hamburger-icon:last-child {
+            margin-bottom: 0;
+        }
+                main {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .settings-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .settings-content {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:black;
+        }
+
+        .payment-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select,
+        .button {
+            border: 1px solid black;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+            height: 30px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+        }
+
+        .button {
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+      
+        <!-- Navigation bar content -->
+                <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li>
+                     <li ><a href="pay.html" class="settings-item">Payment</a></li>   
+                  
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+        </div>
+    </div>
+</main>
+            <li><a href="CODE IT.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html"> Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+
+    </nav>
+
+    <h2>Make Payment</h2>
+
+    <div class="payment-form">
+        <label for="recipientAccount">Recipient Account Number:</label>
+        <input type="text" id="recipientAccount" name="recipientAccount" placeholder="Enter recipient's account number">
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" placeholder="Enter amount">
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod">
+            <option value="mpesa">M-Pesa</option>
+            <option value="equity">Equity</option>
+            <option value="visa">Visa</option>
+        </select>
+
+        <button type="button" class="button" onclick="proceedToPayment()">Proceed to Payment</button>
+    </div>
+
+    <footer>
+        <!-- Footer content -->
+                <p>&copy; 2024 Code It. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function proceedToPayment() {
+            var recipientAccount = document.getElementById("recipientAccount").value;
+            var amount = document.getElementById("amount").value;
+            var paymentMethod = document.getElementById("paymentMethod").value;
+            
+            if (recipientAccount.trim() === "") {
+                alert("Please enter recipient's account number");
+                return;
+            }
+            if (amount.trim() === "" || isNaN(amount)) {
+                alert("Please enter a valid amount");
+                return;
+            }
+
+            switch(paymentMethod) {
+                case "mpesa":
+                    window.location.href = "https://mpesa.com/mpesa_payment?recipient=" + recipientAccount + "&amount=" + amount;
+                    break;
+                case "equity":
+                    window.location.href = "https://equity.com/equity_payment?recipient=" + recipientAccount + "&amount=" + amount;
+                    break;
+                case "visa":
+                    window.location.href = "https://visa.com/visa_payment?recipient=" + recipientAccount + "&amount=" + amount;
+                    break;
+                default:
+                    alert("Invalid payment method");
+            }
+
+            var transactionCost = calculateTransactionCost(amount);
+            sendTransactionCostToYourAccount(transactionCost);
+        }
+
+        function calculateTransactionCost(amount) {
+            return amount * 0.05; // Assuming 5% transaction fee
+        }
+
+        function sendTransactionCostToYourAccount(transactionCost) {
+            console.log("Transaction cost sent to your account: " + transactionCost);
+        }
+        function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

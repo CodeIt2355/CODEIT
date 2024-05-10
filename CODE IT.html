@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE IT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        h4 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .button {
+            border: 1px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 80px;
+            height: 5%;
+            background-color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color:grey;
+        }
+
+        .logo {
+            width: 60px;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: block;
+        }
+                                .settings-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            whitespace:nowrap;
+        }
+
+        .settings-item {
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .hamburger {
+            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .hamburger-icon {
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .hamburger-icon:last-child {
+            margin-bottom: 0;
+        }
+                main {
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        .settings-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+
+        .settings-content {
+            position: relative;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:black;
+        }
+
+        .word {
+            font-family: Algerian;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" class="logo">
+        <div class="word">CODE IT</div>
+<main></main>
+        <ul>
+              <!-- Hamburger Button -->
+    <div class="hamburger" onclick="toggleSettings()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+    </div>
+
+    <!-- Settings Container -->
+    <div class="settings-container" id="settings-container">
+        <div class="settings-content">
+            <span class="close-btn" onclick="toggleSettings()">X</span>
+            <ul class="settings-list">
+                <li><a href="Password.html"class="settings-item">Change Password</a></li>
+                <li ><a href="notify.html"class="settings-item">Notifications</a></li>
+                <li ><a href="privacy.html"class="settings-item">Privacy</a></li>
+                <li ><a href="terms.html" class="settings-item">Terms & Conditions</a></li>
+                 <li ><a href="tutorial.html" class="settings-item"> Tutorial</a></li>
+                 <li ><a href="exercise.html" class="settings-item">Exercise</a></li>
+                     <li ><a href="pay.html" class="settings-item">Payment</a></li>
+        <li ><a href="chat.html" class="settings-item">Chat</a></li>   
+            </ul>
+        </div>
+    </div>
+</main>
+            <li><a href="CODE IT.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="contact us.html"> Contact</a></li>
+            <li><a href="index.html">Logout</a></li>
+
+       
+    </nav>
+
+    <h4>
+        Welcome to our coding app everyone. This app offers you a variety of services. These services are:
+        <ol>
+            <li>Web Design <img src="web.jpg" width="250px"></li>
+            <li>Game Design <img src="game.jpg" width="250px"></li>
+            <li>App Design <img src="app.jpg" width="250px"></li>
+            <li>E.T.C</li>
+        </ol>
+        We also teach those who want to learn some of the coding languages like:
+        <ol>
+            <li>html <img src="html.jpg" width="250px"></li>
+            <li>Python <img src="python.jpg" width="250px"></li>
+            <li>Javascript <img src="Java.jpg" width="250px"></li>
+            <li>CSS <img src="css.jpg" width="250px"></li>
+            <li>E.T.C</li>
+        </ol>
+        If you wish to know more about us just go to the About Us page. OUR PRICES ARE:
+        <ol>
+            <li>Game Design $500</li>
+            <li>Web Design $95</li>
+            <li>App Design $200</li>
+            <li>HTML $95</li>
+            <li>CSS and all the other languages $95</li>
+        </ol>
+        SHARE ABOUT US TO EVERYONE ...
+        THANK YOU!!
+    </h4>
+    <footer>
+        <p>&copy; 2024 Code It. All rights reserved.</p>
+    </footer>
+
+    <script>
+function toggleSettings() {
+            var settingsContainer = document.getElementById("settings-container");
+            if (settingsContainer.style.display === "block") {
+                settingsContainer.style.display = "none";
+            } else {
+                settingsContainer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
